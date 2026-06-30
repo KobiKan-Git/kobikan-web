@@ -10,8 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const logo = "/__l5e/assets-v1/c900b9fe-15c8-44f0-8e51-2068d32c45ce/kobikan-logo.png";
-
 const YEAR = 2026;
 
 const SITE_URL = "https://demo-to-web.lovable.app";
@@ -119,8 +117,15 @@ function Landing() {
 }
 
 /* ---------- Logo ---------- */
-function Logo({ className = "h-9 w-auto" }: { className?: string }) {
-  return <img src={logo} alt="KobiKan — AI Maintenance Assistant logo" className={className} />;
+function Logo({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex items-center gap-2 ${className}`}>
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[color:var(--color-brand)] text-white font-bold text-xl">
+        K
+      </div>
+      <span className="text-xl font-bold font-display tracking-tight">KobiKan</span>
+    </div>
+  );
 }
 
 /* ---------- Nav ---------- */
@@ -940,7 +945,7 @@ function Footer({ t }: { t: typeof T.sk }) {
     <footer className="bg-[color:var(--color-dark)] text-white/70 py-14">
       <div className="container-x grid md:grid-cols-2 gap-10">
         <div>
-          <Logo className="h-9 w-auto" />
+          <Logo className="h-9 w-auto text-white" />
           <p className="mt-4 text-sm text-white/60 max-w-xs">{t.footer.powered}</p>
         </div>
         <div className="text-sm space-y-2 md:text-right">

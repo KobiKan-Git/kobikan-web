@@ -86,11 +86,11 @@ function Network({ count = 150 }) {
             itemSize={3}
           />
         </bufferGeometry>
-        <pointsMaterial size={0.06} color="#ff3333" transparent opacity={0.8} sizeAttenuation />
+        <pointsMaterial size={0.08} color="#ff3333" transparent opacity={1.0} sizeAttenuation />
       </points>
       <lineSegments ref={linesRef}>
         <bufferGeometry />
-        <lineBasicMaterial color="#ff3333" transparent opacity={0.15} depthWrite={false} />
+        <lineBasicMaterial color="#ff3333" transparent opacity={0.35} depthWrite={false} />
       </lineSegments>
     </group>
   );
@@ -98,9 +98,9 @@ function Network({ count = 150 }) {
 
 export function TechnicalBackground() {
   return (
-    <div className="absolute inset-0 pointer-events-none z-0 opacity-40">
+    <div className="absolute inset-0 pointer-events-none z-0 opacity-80">
       <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
-        <Network count={120} />
+        <Network count={160} />
       </Canvas>
     </div>
   );
