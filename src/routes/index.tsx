@@ -3,6 +3,8 @@ import { useEffect, useState, type ReactNode, type FormEvent } from "react";
 import { T, type Lang } from "@/lib/i18n";
 import { CookieBanner } from "@/components/CookieBanner";
 
+import { TechnicalBackground } from "@/components/TechnicalBackground";
+
 const logo = "/__l5e/assets-v1/c900b9fe-15c8-44f0-8e51-2068d32c45ce/kobikan-logo.png";
 
 const YEAR = 2026;
@@ -174,6 +176,7 @@ function CtaButton({ children, onClick, size = "md", variant = "primary" }: { ch
 function Hero({ t, onCta }: { t: typeof T.sk; onCta: () => void }) {
   return (
     <section id="top" className="relative overflow-hidden bg-[color:var(--color-dark)] text-white">
+      <TechnicalBackground />
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)", backgroundSize: "48px 48px" }} />
       <div className="container-x relative pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
