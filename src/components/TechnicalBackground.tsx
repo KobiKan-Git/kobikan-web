@@ -14,7 +14,7 @@ function Network({ count = 150 }) {
       pos[i * 3] = (Math.random() - 0.5) * 15;
       pos[i * 3 + 1] = (Math.random() - 0.5) * 15;
       pos[i * 3 + 2] = (Math.random() - 0.5) * 15;
-      
+
       vel[i * 3] = (Math.random() - 0.5) * 0.01;
       vel[i * 3 + 1] = (Math.random() - 0.5) * 0.01;
       vel[i * 3 + 2] = (Math.random() - 0.5) * 0.01;
@@ -26,7 +26,7 @@ function Network({ count = 150 }) {
 
   useFrame((state, delta) => {
     if (!group.current || !linesRef.current || !pointsRef.current) return;
-    
+
     // Slow rotation of the entire network
     group.current.rotation.y += delta * 0.05;
     group.current.rotation.x += delta * 0.02;
@@ -58,16 +58,20 @@ function Network({ count = 150 }) {
 
         if (distSq < maxDistance * maxDistance) {
           linePositions.push(
-            pos[i * 3], pos[i * 3 + 1], pos[i * 3 + 2],
-            pos[j * 3], pos[j * 3 + 1], pos[j * 3 + 2]
+            pos[i * 3],
+            pos[i * 3 + 1],
+            pos[i * 3 + 2],
+            pos[j * 3],
+            pos[j * 3 + 1],
+            pos[j * 3 + 2],
           );
         }
       }
     }
-    
+
     linesRef.current.geometry.setAttribute(
-      'position',
-      new THREE.Float32BufferAttribute(linePositions, 3)
+      "position",
+      new THREE.Float32BufferAttribute(linePositions, 3),
     );
   });
 
@@ -82,22 +86,11 @@ function Network({ count = 150 }) {
             itemSize={3}
           />
         </bufferGeometry>
-        <pointsMaterial
-          size={0.06}
-          color="#ff3333"
-          transparent
-          opacity={0.8}
-          sizeAttenuation
-        />
+        <pointsMaterial size={0.06} color="#ff3333" transparent opacity={0.8} sizeAttenuation />
       </points>
       <lineSegments ref={linesRef}>
         <bufferGeometry />
-        <lineBasicMaterial
-          color="#ff3333"
-          transparent
-          opacity={0.15}
-          depthWrite={false}
-        />
+        <lineBasicMaterial color="#ff3333" transparent opacity={0.15} depthWrite={false} />
       </lineSegments>
     </group>
   );

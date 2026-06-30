@@ -6,9 +6,17 @@ export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog — KobiKan: AI v priemyselnej údržbe" },
-      { name: "description", content: "Praktické články o AI v priemyselnej výrobe a údržbe — implementácia, downtime, zachytávanie znalostí, PLC integrácie." },
+      {
+        name: "description",
+        content:
+          "Praktické články o AI v priemyselnej výrobe a údržbe — implementácia, downtime, zachytávanie znalostí, PLC integrácie.",
+      },
       { property: "og:title", content: "Blog — KobiKan: AI v priemyselnej údržbe" },
-      { property: "og:description", content: "Praktické články o AI v priemyselnej výrobe a údržbe — implementácia, downtime, zachytávanie znalostí, PLC integrácie." },
+      {
+        property: "og:description",
+        content:
+          "Praktické články o AI v priemyselnej výrobe a údržbe — implementácia, downtime, zachytávanie znalostí, PLC integrácie.",
+      },
       { property: "og:url", content: `${SITE_URL}/blog` },
       { property: "og:type", content: "website" },
     ],
@@ -32,17 +40,37 @@ export function BlogIndex({
   otherHref: string;
   otherLabel: string;
 }) {
-  const t = lang === "sk"
-    ? { eyebrow: "Blog", title: "AI v priemyselnej údržbe", sub: "Praktické články pre tímy údržby, ktoré chcú znížiť výpadky a zachytiť znalosti svojich technikov.", read: "min čítania", back: "Späť na KobiKan" }
-    : { eyebrow: "Blog", title: "AI in industrial maintenance", sub: "Practical articles for maintenance teams that want to reduce downtime and capture technician knowledge.", read: "min read", back: "Back to KobiKan" };
+  const t =
+    lang === "sk"
+      ? {
+          eyebrow: "Blog",
+          title: "AI v priemyselnej údržbe",
+          sub: "Praktické články pre tímy údržby, ktoré chcú znížiť výpadky a zachytiť znalosti svojich technikov.",
+          read: "min čítania",
+          back: "Späť na KobiKan",
+        }
+      : {
+          eyebrow: "Blog",
+          title: "AI in industrial maintenance",
+          sub: "Practical articles for maintenance teams that want to reduce downtime and capture technician knowledge.",
+          read: "min read",
+          back: "Back to KobiKan",
+        };
   const pillar = posts.find((p) => p.pillar);
   const rest = posts.filter((p) => !p.pillar);
   return (
     <main className="min-h-screen bg-white text-[color:var(--color-dark)] selection:bg-[color:var(--color-brand)]/30">
       <header className="border-b border-[color:var(--color-border)]">
         <div className="container-x flex h-16 items-center justify-between text-sm">
-          <Link to="/" className="font-semibold tracking-tight">← {t.back}</Link>
-          <a href={otherHref} className="text-[color:var(--color-neutral-gray)] hover:text-[color:var(--color-brand)]">{otherLabel}</a>
+          <Link to="/" className="font-semibold tracking-tight">
+            ← {t.back}
+          </Link>
+          <a
+            href={otherHref}
+            className="text-[color:var(--color-neutral-gray)] hover:text-[color:var(--color-brand)]"
+          >
+            {otherLabel}
+          </a>
         </div>
       </header>
 
@@ -50,10 +78,16 @@ export function BlogIndex({
         {/* Eyebrow with hairline */}
         <div className="flex items-center gap-3">
           <span className="h-px w-8 bg-[color:var(--color-brand)]" />
-          <span className="text-[color:var(--color-brand)] font-semibold tracking-[0.2em] text-xs uppercase">{lang === "sk" ? "KobiKan Journal" : "The KobiKan Journal"}</span>
+          <span className="text-[color:var(--color-brand)] font-semibold tracking-[0.2em] text-xs uppercase">
+            {lang === "sk" ? "KobiKan Journal" : "The KobiKan Journal"}
+          </span>
         </div>
-        <h1 className="mt-5 text-5xl md:text-6xl font-display font-semibold tracking-tight max-w-3xl leading-[0.95]">{t.title}</h1>
-        <p className="mt-6 max-w-xl text-lg text-[color:var(--color-neutral-gray)] leading-relaxed">{t.sub}</p>
+        <h1 className="mt-5 text-5xl md:text-6xl font-display font-semibold tracking-tight max-w-3xl leading-[0.95]">
+          {t.title}
+        </h1>
+        <p className="mt-6 max-w-xl text-lg text-[color:var(--color-neutral-gray)] leading-relaxed">
+          {t.sub}
+        </p>
 
         {/* Pillar — split card */}
         {pillar && (
@@ -64,14 +98,35 @@ export function BlogIndex({
           >
             <div className="flex flex-col md:flex-row">
               <div className="relative z-10 flex flex-1 flex-col justify-center p-8 md:p-14 lg:p-16">
-                <span className="text-[color:var(--color-brand)] text-xs font-semibold uppercase tracking-[0.2em]">{pillar.category}</span>
-                <h2 className="mt-5 text-3xl md:text-4xl lg:text-5xl font-display font-semibold leading-[1.1] text-white tracking-tight">{pillar.title}</h2>
-                <p className="mt-5 text-white/60 text-base md:text-lg leading-relaxed max-w-lg">{pillar.description}</p>
+                <span className="text-[color:var(--color-brand)] text-xs font-semibold uppercase tracking-[0.2em]">
+                  {pillar.category}
+                </span>
+                <h2 className="mt-5 text-3xl md:text-4xl lg:text-5xl font-display font-semibold leading-[1.1] text-white tracking-tight">
+                  {pillar.title}
+                </h2>
+                <p className="mt-5 text-white/60 text-base md:text-lg leading-relaxed max-w-lg">
+                  {pillar.description}
+                </p>
                 <div className="mt-8 inline-flex items-center gap-3 text-white font-semibold text-sm group-hover:text-[color:var(--color-brand)] transition-colors">
                   {lang === "sk" ? "Čítať celý článok" : "Read full story"}
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
                 </div>
-                <p className="mt-8 text-xs text-white/40 tracking-wide">{pillar.readMin} {t.read} · {new Date(pillar.date).toLocaleDateString(lang === "sk" ? "sk-SK" : "en-US")}</p>
+                <p className="mt-8 text-xs text-white/40 tracking-wide">
+                  {pillar.readMin} {t.read} ·{" "}
+                  {new Date(pillar.date).toLocaleDateString(lang === "sk" ? "sk-SK" : "en-US")}
+                </p>
               </div>
               {/* Decorative panel (replaces image) */}
               <div className="relative flex-1 min-h-[280px] md:min-h-0 overflow-hidden">
@@ -86,7 +141,9 @@ export function BlogIndex({
                   }}
                 />
                 <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[color:var(--color-dark)] to-transparent md:block hidden" />
-                <div className="absolute bottom-6 right-6 text-[10px] uppercase tracking-[0.3em] text-white/40">{lang === "sk" ? "Sprievodca" : "Pillar"}</div>
+                <div className="absolute bottom-6 right-6 text-[10px] uppercase tracking-[0.3em] text-white/40">
+                  {lang === "sk" ? "Sprievodca" : "Pillar"}
+                </div>
               </div>
             </div>
             <div className="absolute inset-0 pointer-events-none rounded-3xl ring-1 ring-inset ring-white/10" />
@@ -113,19 +170,31 @@ export function BlogIndex({
                   }}
                 />
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                  <span className="font-display text-3xl text-white/85 leading-none tracking-tight">{String(rest.indexOf(p) + 1).padStart(2, "0")}</span>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-white/50">{p.category}</span>
+                  <span className="font-display text-3xl text-white/85 leading-none tracking-tight">
+                    {String(rest.indexOf(p) + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-white/50">
+                    {p.category}
+                  </span>
                 </div>
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 pointer-events-none" />
               </div>
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2">
-                  <span className="text-[color:var(--color-brand)] text-[10px] font-bold uppercase tracking-[0.25em]">{p.category}</span>
+                  <span className="text-[color:var(--color-brand)] text-[10px] font-bold uppercase tracking-[0.25em]">
+                    {p.category}
+                  </span>
                   <span className="h-1 w-1 rounded-full bg-neutral-300" />
-                  <span className="text-neutral-500 text-xs">{p.readMin} {t.read}</span>
+                  <span className="text-neutral-500 text-xs">
+                    {p.readMin} {t.read}
+                  </span>
                 </div>
-                <h3 className="text-xl font-semibold font-display text-[color:var(--color-dark)] leading-snug group-hover:text-[color:var(--color-brand)] transition-colors">{p.title}</h3>
-                <p className="text-[color:var(--color-neutral-gray)] text-sm leading-relaxed line-clamp-2">{p.description}</p>
+                <h3 className="text-xl font-semibold font-display text-[color:var(--color-dark)] leading-snug group-hover:text-[color:var(--color-brand)] transition-colors">
+                  {p.title}
+                </h3>
+                <p className="text-[color:var(--color-neutral-gray)] text-sm leading-relaxed line-clamp-2">
+                  {p.description}
+                </p>
               </div>
             </Link>
           ))}
@@ -134,4 +203,3 @@ export function BlogIndex({
     </main>
   );
 }
-

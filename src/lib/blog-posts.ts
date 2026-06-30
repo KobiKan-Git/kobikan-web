@@ -35,14 +35,14 @@ export function pairedSlug(post: { lang: BlogLang; slug: string }): string | und
   return PAIRS.find((p) => p[1] === post.slug)?.[0];
 }
 
-
 export const POSTS: BlogPost[] = [
   // ============== SK ==============
   {
     slug: "ai-v-priemyselnej-vyrobe",
     lang: "sk",
     title: "AI v priemyselnej výrobe: praktický sprievodca implementáciou v údržbe",
-    description: "Krok za krokom — ako nasadiť AI v priemyselnom závode, znížiť neplánované výpadky a zachytiť znalosti technikov. Pilot za 2 týždne, on-prem alebo cloud.",
+    description:
+      "Krok za krokom — ako nasadiť AI v priemyselnom závode, znížiť neplánované výpadky a zachytiť znalosti technikov. Pilot za 2 týždne, on-prem alebo cloud.",
     date: "2026-06-30",
     readMin: 12,
     category: "Sprievodca",
@@ -53,7 +53,7 @@ export const POSTS: BlogPost[] = [
       {
         h: "Prečo práve teraz",
         p: [
-          "Priemerne 50 % skúsených technikov odíde do dôchodku v horizonte 5–10 rokov. Spolu s nimi odchádzajú znalosti, ktoré nikdy neboli zapísané — \"prečo tento ventil treba dotiahnuť práve 2/3 otočky\", \"ktorá poistka pravidelne padá v zime\", \"v ktorom šuplíku je náhradný snímač\".",
+          'Priemerne 50 % skúsených technikov odíde do dôchodku v horizonte 5–10 rokov. Spolu s nimi odchádzajú znalosti, ktoré nikdy neboli zapísané — "prečo tento ventil treba dotiahnuť práve 2/3 otočky", "ktorá poistka pravidelne padá v zime", "v ktorom šuplíku je náhradný snímač".',
           "Súčasne rastie zložitosť strojov. Jeden montážny riadok dnes generuje viac dát za hodinu ako celá továreň pred 15 rokmi. Klasické MES a CMMS systémy ukladajú dáta, ale nepomáhajú technikovi rýchlo nájsť odpoveď v 3 ráno pri stojacej linke.",
         ],
       },
@@ -98,13 +98,18 @@ export const POSTS: BlogPost[] = [
         ],
       },
     ],
-    related: ["ako-ai-znizuje-neplanovane-vypadky", "zachytavanie-znalosti-technikov", "plc-kod-a-ai"],
+    related: [
+      "ako-ai-znizuje-neplanovane-vypadky",
+      "zachytavanie-znalosti-technikov",
+      "plc-kod-a-ai",
+    ],
   },
   {
     slug: "ako-ai-znizuje-neplanovane-vypadky",
     lang: "sk",
     title: "Ako AI znižuje neplánované výpadky vo výrobe",
-    description: "Neplánovaný výpadok vo výrobe stojí tisíce eur za minútu. Pozrite, ako AI pomáha skrátiť čas opravy a predchádzať opakujúcim sa poruchám.",
+    description:
+      "Neplánovaný výpadok vo výrobe stojí tisíce eur za minútu. Pozrite, ako AI pomáha skrátiť čas opravy a predchádzať opakujúcim sa poruchám.",
     date: "2026-06-28",
     readMin: 6,
     category: "Downtime",
@@ -140,7 +145,8 @@ export const POSTS: BlogPost[] = [
     slug: "zachytavanie-znalosti-technikov",
     lang: "sk",
     title: "Zachytávanie znalostí skúsených technikov pred odchodom do dôchodku",
-    description: "Ako previesť tiché znalosti seniorov do systému, ktorý je dostupný celému tímu — bez papierovania a bez „prosím napíš to do Wordu\“.",
+    description:
+      "Ako previesť tiché znalosti seniorov do systému, ktorý je dostupný celému tímu — bez papierovania a bez „prosím napíš to do Wordu\“.",
     date: "2026-06-25",
     readMin: 5,
     category: "Knowledge",
@@ -175,7 +181,8 @@ export const POSTS: BlogPost[] = [
     slug: "plc-kod-a-ai",
     lang: "sk",
     title: "PLC kód a AI: ako sprístupniť dáta zo strojov technikom",
-    description: "PLC programy obsahujú odpovede na väčšinu otázok, ale technik k nim nemá prístup. Pozrite, ako AI vie čítať PLC kód a vysvetliť ho v ľudskej reči.",
+    description:
+      "PLC programy obsahujú odpovede na väčšinu otázok, ale technik k nim nemá prístup. Pozrite, ako AI vie čítať PLC kód a vysvetliť ho v ľudskej reči.",
     date: "2026-06-22",
     readMin: 5,
     category: "Integrácie",
@@ -212,7 +219,8 @@ export const POSTS: BlogPost[] = [
     slug: "ai-in-manufacturing",
     lang: "en",
     title: "AI in Manufacturing: A Practical Implementation Guide for Maintenance",
-    description: "A step-by-step guide to deploying AI in an industrial plant — reduce unplanned downtime, capture technician knowledge, and pilot in 2 weeks. On-prem or cloud.",
+    description:
+      "A step-by-step guide to deploying AI in an industrial plant — reduce unplanned downtime, capture technician knowledge, and pilot in 2 weeks. On-prem or cloud.",
     date: "2026-06-30",
     readMin: 12,
     category: "Guide",
@@ -223,7 +231,7 @@ export const POSTS: BlogPost[] = [
       {
         h: "Why now",
         p: [
-          "On average, 50% of experienced technicians will retire within 5–10 years. With them goes knowledge that was never written down — \"why this valve needs exactly two-thirds of a turn\", \"which fuse drops out every winter\", \"which drawer holds the spare sensor\".",
+          'On average, 50% of experienced technicians will retire within 5–10 years. With them goes knowledge that was never written down — "why this valve needs exactly two-thirds of a turn", "which fuse drops out every winter", "which drawer holds the spare sensor".',
           "Machine complexity is growing at the same time. One assembly line today generates more data per hour than an entire plant did fifteen years ago. Classic MES and CMMS systems store the data — they don't help a technician find an answer at 3 a.m. with the line down.",
         ],
       },
@@ -254,8 +262,8 @@ export const POSTS: BlogPost[] = [
       {
         h: "Common mistakes",
         p: [
-          "Starting with a big \"digital transformation project\". The opposite approach wins: one area, two or three technicians, two weeks. Expand only after it actually helps.",
-          "Trying to \"clean up the data\" first. Modern AI handles imperfect documentation. Better to launch and clean only what is actually used.",
+          'Starting with a big "digital transformation project". The opposite approach wins: one area, two or three technicians, two weeks. Expand only after it actually helps.',
+          'Trying to "clean up the data" first. Modern AI handles imperfect documentation. Better to launch and clean only what is actually used.',
           "Leaving technicians out of decisions. A tool the field doesn't use has no value. Their feedback from week one matters more than any dashboard.",
         ],
       },
@@ -268,13 +276,18 @@ export const POSTS: BlogPost[] = [
         ],
       },
     ],
-    related: ["how-ai-reduces-unplanned-downtime", "capturing-technician-knowledge", "plc-code-and-ai"],
+    related: [
+      "how-ai-reduces-unplanned-downtime",
+      "capturing-technician-knowledge",
+      "plc-code-and-ai",
+    ],
   },
   {
     slug: "how-ai-reduces-unplanned-downtime",
     lang: "en",
     title: "How AI reduces unplanned downtime in manufacturing",
-    description: "Unplanned downtime costs thousands of euros per minute. See how AI shortens repair time and prevents recurring failures.",
+    description:
+      "Unplanned downtime costs thousands of euros per minute. See how AI shortens repair time and prevents recurring failures.",
     date: "2026-06-28",
     readMin: 6,
     category: "Downtime",
@@ -300,7 +313,7 @@ export const POSTS: BlogPost[] = [
         p: [
           "MTTR for the top 10 most common failures. Track the trend for the first three months.",
           "Number of recurring failures on the same machine — it should drop because technicians have access to previous solutions.",
-          "After-hours escalations. If they fall, your night shift effectively has a \"24/7 senior\" in hand.",
+          'After-hours escalations. If they fall, your night shift effectively has a "24/7 senior" in hand.',
         ],
       },
     ],
@@ -310,7 +323,8 @@ export const POSTS: BlogPost[] = [
     slug: "capturing-technician-knowledge",
     lang: "en",
     title: "Capturing senior technician knowledge before they retire",
-    description: "How to move tacit senior knowledge into a system the whole team can use — without paperwork and without \"please write this in Word\".",
+    description:
+      'How to move tacit senior knowledge into a system the whole team can use — without paperwork and without "please write this in Word".',
     date: "2026-06-25",
     readMin: 5,
     category: "Knowledge",
@@ -345,7 +359,8 @@ export const POSTS: BlogPost[] = [
     slug: "plc-code-and-ai",
     lang: "en",
     title: "PLC code and AI: making machine data accessible to technicians",
-    description: "PLC programs hold the answers to most questions, but technicians can't read them. See how AI reads PLC code and explains it in plain language.",
+    description:
+      "PLC programs hold the answers to most questions, but technicians can't read them. See how AI reads PLC code and explains it in plain language.",
     date: "2026-06-22",
     readMin: 5,
     category: "Integrations",
@@ -356,7 +371,7 @@ export const POSTS: BlogPost[] = [
         h: "What AI can read today",
         p: [
           "Siemens S7 (SCL, LAD, FBD), Rockwell Studio 5000, Beckhoff TwinCAT, Mitsubishi GX Works. Exported programs are imported and linked to the I/O list and HMI structures.",
-          "Technicians can then ask: \"Why did the cycle stop at station 4?\" and get an answer with the specific input, current state, and the last record of when this happened.",
+          'Technicians can then ask: "Why did the cycle stop at station 4?" and get an answer with the specific input, current state, and the last record of when this happened.',
         ],
       },
       {

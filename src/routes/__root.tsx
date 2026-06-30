@@ -78,16 +78,36 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Kobikan — AI asistent údržby pre priemysel" },
-      { name: "description", content: "Kobikan je váš digitálny kolega 24/7. Zachytí znalosti vašej prevádzky a premení ich na okamžité odpovede pre každého technika." },
+      {
+        name: "description",
+        content:
+          "Kobikan je váš digitálny kolega 24/7. Zachytí znalosti vašej prevádzky a premení ich na okamžité odpovede pre každého technika.",
+      },
       { name: "author", content: "Touch4IT" },
       { property: "og:title", content: "Kobikan — AI asistent údržby pre priemysel" },
-      { property: "og:description", content: "Kobikan je váš digitálny kolega 24/7. Zachytí znalosti vašej prevádzky a premení ich na okamžité odpovede pre každého technika." },
+      {
+        property: "og:description",
+        content:
+          "Kobikan je váš digitálny kolega 24/7. Zachytí znalosti vašej prevádzky a premení ich na okamžité odpovede pre každého technika.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Kobikan — AI asistent údržby pre priemysel" },
-      { name: "twitter:description", content: "Kobikan je váš digitálny kolega 24/7. Zachytí znalosti vašej prevádzky a premení ich na okamžité odpovede pre každého technika." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd639f05-8506-4fa0-864a-7ac152ff6f74/id-preview-eff27ed5--7e9eaf47-0a52-45de-912c-459eadb729b1.lovable.app-1782400115841.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd639f05-8506-4fa0-864a-7ac152ff6f74/id-preview-eff27ed5--7e9eaf47-0a52-45de-912c-459eadb729b1.lovable.app-1782400115841.png" },
+      {
+        name: "twitter:description",
+        content:
+          "Kobikan je váš digitálny kolega 24/7. Zachytí znalosti vašej prevádzky a premení ich na okamžité odpovede pre každého technika.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd639f05-8506-4fa0-864a-7ac152ff6f74/id-preview-eff27ed5--7e9eaf47-0a52-45de-912c-459eadb729b1.lovable.app-1782400115841.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd639f05-8506-4fa0-864a-7ac152ff6f74/id-preview-eff27ed5--7e9eaf47-0a52-45de-912c-459eadb729b1.lovable.app-1782400115841.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -102,8 +122,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
-
-
     ],
   }),
 

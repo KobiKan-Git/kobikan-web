@@ -254,15 +254,7 @@ export function PostView({ post }: { post: BlogPost }) {
   );
 }
 
-function StickyCta({
-  lang: _lang,
-  msg,
-  cta,
-}: {
-  lang: "sk" | "en";
-  msg: string;
-  cta: string;
-}) {
+function StickyCta({ lang: _lang, msg, cta }: { lang: "sk" | "en"; msg: string; cta: string }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 600);

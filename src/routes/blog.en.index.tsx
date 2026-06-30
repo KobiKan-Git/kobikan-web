@@ -7,9 +7,17 @@ export const Route = createFileRoute("/blog/en/")({
   head: () => ({
     meta: [
       { title: "Blog — KobiKan: AI in industrial maintenance" },
-      { name: "description", content: "Practical articles on AI in industrial manufacturing and maintenance — implementation, downtime, knowledge capture, PLC integrations." },
+      {
+        name: "description",
+        content:
+          "Practical articles on AI in industrial manufacturing and maintenance — implementation, downtime, knowledge capture, PLC integrations.",
+      },
       { property: "og:title", content: "Blog — KobiKan: AI in industrial maintenance" },
-      { property: "og:description", content: "Practical articles on AI in industrial manufacturing and maintenance — implementation, downtime, knowledge capture, PLC integrations." },
+      {
+        property: "og:description",
+        content:
+          "Practical articles on AI in industrial manufacturing and maintenance — implementation, downtime, knowledge capture, PLC integrations.",
+      },
       { property: "og:url", content: `${SITE_URL}/blog/en` },
       { property: "og:type", content: "website" },
     ],
