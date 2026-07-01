@@ -119,12 +119,7 @@ function Landing() {
 /* ---------- Logo ---------- */
 function Logo({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[color:var(--color-brand)] text-white font-bold text-xl">
-        K
-      </div>
-      <span className="text-xl font-bold font-display tracking-tight">KobiKan</span>
-    </div>
+    <img src="/kobikan-logo.svg" alt="KobiKan" className={`h-8 w-auto ${className}`} />
   );
 }
 
